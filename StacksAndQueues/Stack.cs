@@ -39,6 +39,27 @@ namespace StacksAndQueues
             return true;
 
         }
+        public bool Append(int data)
+        {
+            Node node = new Node(data);
+
+            if (head == null)
+            {
+                head = node;
+                return true;
+            }
+
+            Node t = head;
+
+            while (t.next != null)
+            {
+                t = t.next;
+            }
+            t.next = node;
+
+            return true;
+
+        }
 
         public void Display()
         {
